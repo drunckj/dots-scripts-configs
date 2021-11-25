@@ -1,0 +1,26 @@
+[global_config]
+  extra_styling = False
+  title_at_bottom = True
+  title_hide_sizetext = True
+  title_transmit_bg_color = "#26a269"
+[keybindings]
+[profiles]
+  [[default]]
+    background_darkness = 0.91
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    font = Source Code Pro 14
+    foreground_color = "#00ff00"
+    show_titlebar = False
+    palette = "#000000:#aa0000:#00aa00:#aa5500:#0000aa:#aa00aa:#00aaaa:#aaaaaa:#555555:#ff5555:#55ff55:#ffff55:#5555ff:#ff55ff:#55ffff:#ffffff"
+    use_system_font = False
+    bold_is_bright = True
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+[plugins]
