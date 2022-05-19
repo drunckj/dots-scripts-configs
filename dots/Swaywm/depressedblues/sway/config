@@ -18,13 +18,13 @@ set $term foot
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-#set $menu rofi -show combi -combi-modes "window,run,ssh" -modes combi
+set $menu rofi -no-lazy-grab -show drun -modi drun -theme config.rasi
 default_border none
 default_border pixel 1
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-exec swaymsg output "*" bg "~/Downloads/background.jpg" fill
+
 #
 # Example configuration:
 #
@@ -75,7 +75,7 @@ input "1267:12410:ELAN1203:00_04F3:307A_Touchpad" {
     bindsym $mod+Shift+q kill
 
     # Start your launcher
-    bindsym $mod+d exec ~/.config/rofi/launchers/colorful/launcher.sh
+    bindsym $mod+d exec $menu
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -261,5 +261,5 @@ position top
  client.focused #b3b5ea #b3b5ea #b3b5ea #b3b5ea
 exec --no-startup-id /usr/bin/lxpolkit
 gaps inner 20
-output "*" bg  "/home/drunkcj/Downloads/Learn C Advanced.png" fill
+output "*" bg  "~/Downloads/background.jpg" fill
 include /etc/sway/config.d/*
