@@ -1,0 +1,1 @@
+convert feat.PNG -background black -alpha remove -alpha off  out.png
