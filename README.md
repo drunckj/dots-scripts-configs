@@ -2,7 +2,8 @@
 Repo for dots,scripts and configs
 # BSPWM
 ## XBEST
-![image](https://user-images.githubusercontent.com/50874358/217482192f71724b4-4269-4718-9424-86501375c85e.png)
+![2023-02-08_14-20](https://user-images.githubusercontent.com/50874358/217482479-282523a7-a26d-4faf-9c38-fd9d4e7da920.png)
+
 # Sway
 ## Depressed blues
 
