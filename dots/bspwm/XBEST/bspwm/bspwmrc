@@ -1,0 +1,35 @@
+#! /bin/bash
+feh --randomize --bg-scale ~/.config/wallpapers
+picom --config ~/.config/picom/picom.conf &
+bash ~/.config/polybar/launch.sh --forest &
+nm-applet &
+lxpolkit &
+blueman-applet &
+if [[ ! $(pidof stalonetray) ]]; then
+	stalonetray &
+  sleep 0.5
+	xdo hide -N stalonetray
+	touch "/tmp/syshide.lock"
+fi
+pgrep -x sxhkd > /dev/null || sxhkd &
+bspc wm -O eDP-1 HDMI-1-0
+bspc monitor  -d 1 2 3 4 5 6
+
+bspc config border_width         1
+bspc config window_gap          12
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+bspc rule -a Gimp desktop='^8' state=floating follow=on
+bspc rule -a Chromium desktop='^2'
+bspc rule -a mplayer2 state=floating
+bspc rule -a Kupfer.py focus=on
+bspc rule -a Screenkey manage=off
+bspc rule -a Gpick state=floating
+bspc rule -a feh state=floating rectangle=1376x625+0+0
+#COLORS
+bspc config focused_border_color "#241c21"
+bspc config normal_border_color "#241c21"
+bspc config focus_follows_pointer true
