@@ -1,0 +1,26 @@
+[
+    {
+        "key": "general:border_size",
+        "value": 1
+    },
+    {
+        "key": "general:col.active_border",
+        "value": "rgb(f6f5f4)"
+    },
+    {
+        "key": "general:no_border_on_floating",
+        "value": true
+    },
+    {
+        "key": "general:gaps_in",
+        "value": 2
+    },
+    {
+        "key": "general:gaps_out",
+        "value": 11
+    },
+    {
+        "key": "decoration:blur:size",
+        "value": 2
+    }
+]

@@ -1,0 +1,61 @@
+{
+    // "layer": "top", // Waybar at top layer
+    
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    
+    "height": 15, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    
+    "spacing": 4, // Gaps between modules (4px)
+    
+    // Choose the order of the modules
+
+    // Load Modules
+    "include": [
+        "~/.config/ml4w/settings/waybar-quicklinks.json",
+        "~/.config/waybar/modules.json"
+    ],    
+
+    "modules-left": [
+        "custom/appmenu",
+        "group/quicklinks",
+        "hyprland/window"
+    ],
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "active": "",
+            "default": "",
+            "empty": ""
+        },
+        "persistent-workspaces": {
+            "*": [ 1,2,3,4,5 ]
+        }
+    },
+    
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    
+    "modules-right": [ 
+        "pulseaudio", 
+        "network", 
+        "cpu", 
+        "memory", 
+	"custom/powerprofile",
+        // "keyboard-state", 
+        "battery", 
+        "clock", 
+        "tray",
+        "custom/exit"
+        
+    ],
+
+     "custom/powerprofile": {
+    "exec": "powerprofilesctl get",  // Displays the current power profile
+    "interval": 10,  // Updates every 10 seconds
+    "format": "{}",
+    "tooltip": "Current Power Profile",
+    "on-click": "/home/drunkcj/scripts/powerprofileswitch.sh"  // Executes your script on click
+  }
+}
